@@ -1,0 +1,54 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: demochat
+  description: Api ых
+  contact:
+    name: Kirill
+servers:
+  - url: localhost:9090
+paths:
+  /messages:
+    get:
+      description: список всех сообщений
+      operationId: getAllMessages
+      responses:
+        '200':
+          description: all messages
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Message'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Message:
+      type: object
+      required:
+        - author
+        - message
+      properties:
+        id:
+          type: integer
+        author:
+          type: string
+        message:
+          type: string
+
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+        message:
+          type: string

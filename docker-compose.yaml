@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: postgres:9.6.16
+    container_name: database
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: kirill
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: demo

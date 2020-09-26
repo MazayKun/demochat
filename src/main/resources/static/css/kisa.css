@@ -1,0 +1,15 @@
+main {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 5%;
+}
+span{
+    font-size: 50px;
+    color: pink;
+    font-family: 'Comic Neue', cursive;
+}
+
