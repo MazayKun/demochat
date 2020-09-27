@@ -27,6 +27,27 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /send:
+    post:
+      description: отправка нового сообщения
+      operationId: sendMessage
+      requestBody:
+        description: автор и текст сообщения
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Message'
+      responses:
+        '200':
+          description: OK
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
 components:
   schemas:
     Message:

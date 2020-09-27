@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface IMessageDAO {
 
-    void addMessage(String author, String message);
+    int addMessage(MessageModel model);
 
     List<MessageModel> getMessages();
 

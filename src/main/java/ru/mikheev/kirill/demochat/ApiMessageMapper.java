@@ -13,7 +13,7 @@ import java.util.List;
 
 @Service
 public class ApiMessageMapper {
-    public List<Message> map(List<MessageModel> models) {
+    public List<Message> mapModelListIntoMessageList(List<MessageModel> models) {
         List<Message> answer = new ArrayList<>();
         for (MessageModel mm : models) {
             Message message = new Message();
@@ -23,5 +23,9 @@ public class ApiMessageMapper {
             answer.add(message);
         }
         return answer;
+    }
+
+    public MessageModel mapMessageIntoModel(Message message) {
+        return new MessageModel(message.getAuthor(), message.getMessage());
     }
 }

@@ -1,8 +1,6 @@
 package ru.mikheev.kirill.demochat;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * @author Kirill Mikheev
@@ -10,12 +8,15 @@ import lombok.Setter;
  */
 
 @AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 @Setter
 public class MessageModel {
 
     private Integer id;
+    @NonNull
     private String author;
+    @NonNull
     private String message;
 
 }

@@ -9,13 +9,18 @@
 </head>
 <body>
     <main class="main_wrapper">
-        <div class="login_window">
+        <div class="login_window invisible">
             <div class="welcome_message">Привет!<br>Вводи скорее логин и поехали!</div>
             <input class="login_field" type="text">
-            <a href="#" class="submit_button">Поехали!</a>
+            <a href="" class="button submit">Поехали!</a>
         </div>
-        <div class="up">
+        <div class="up invisible"></div>
+        <div class="messenger_window invisible">
+            <div class="message_history"></div>
+            <input class="message_field" type="text">
+            <a href="" class="button send">Отправить</a>
         </div>
     </main>
+    <script src="/js/parse.js"></script>
 </body>
 </html>
