@@ -1,4 +1,4 @@
-package ru.mikheev.kirill.demochat;
+package ru.mikheev.kirill.demochat.filter;
 
 import org.springframework.stereotype.Component;
 
@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ * Ловит все ответы на запросы и добавляет к ним в заголовок конфигурации CORS,
+ * что б все нормально работало в локальной сети и на локальной машине
  * @author Kirill Mikheev
  * @version 1.0
  */

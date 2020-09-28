@@ -1,12 +1,14 @@
-package ru.mikheev.kirill.demochat;
+package ru.mikheev.kirill.demochat.mapper;
 
 import org.springframework.stereotype.Service;
+import ru.mikheev.kirill.demochat.pojo.MessageModel;
 import ru.mikheev.kirill.system.api.model.Message;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
+ *
  * @author Kirill Mikheev
  * @version 1.0
  */
