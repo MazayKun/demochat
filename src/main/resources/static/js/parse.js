@@ -55,13 +55,13 @@
     async function showAllMessages(url) {
         let response = await fetch(url + "messages");
         let json = await response.json();
-        let elem = document.getElementsByClassName('message_history');
+        let hist = document.getElementsByClassName('message_history');
         for (let note of json) {
-            let newelem = document.createElement('div');
-            newelem.textContent = note.author + " : " + note.message;
-            newelem.classList.add("message_bubble");
-            newelem.dataset.id = note.id;
-            elem[0].append(newelem);
+            let new_div = document.createElement('div');
+            new_div.textContent = note.author + " : " + note.message;
+            new_div.classList.add("message_bubble");
+            new_div.dataset.id = note.id;
+            hist[0].append(new_div);
         }
     }
 
@@ -74,11 +74,11 @@
         for (let note of json) {
             if(skip || bubbles_id.indexOf(note.id.toString()) === -1) {
                 skip = true;
-                let newelem = document.createElement('div');
-                newelem.textContent = note.author + " : " + note.message;
-                newelem.classList.add("message_bubble");
-                newelem.dataset.id = note.id;
-                hist[0].append(newelem);
+                let new_div = document.createElement('div');
+                new_div.textContent = note.author + " : " + note.message;
+                new_div.classList.add("message_bubble");
+                new_div.dataset.id = note.id;
+                hist[0].append(new_div);
             }
         }
     }

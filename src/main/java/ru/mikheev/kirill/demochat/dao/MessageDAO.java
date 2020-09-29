@@ -23,12 +23,12 @@ import java.util.List;
 public class MessageDAO extends JdbcDaoSupport implements IMessageDAO {
 
     /** Шаблон запроса  добавления нового сообщения в базу */
-    private String addQuery = "Insert Into messages(author, message) Values (?, ?);";
+    private final String addQuery = "Insert Into messages(author, message) Values (?, ?);";
     /** Запрос всех сообщений из базы */
     private final String getAllQuery = "Select * From messages;";
 
-    private MessageMapper messageMapper;
-    private ApiMessageMapper apiMessageMapper;
+    private final MessageMapper messageMapper;
+    private final ApiMessageMapper apiMessageMapper;
 
     /**
      * При создании так же создает таблицу с сообщениями в базе, если таковой не было
@@ -43,7 +43,7 @@ public class MessageDAO extends JdbcDaoSupport implements IMessageDAO {
 
     /**
      * Добавление новог сообщения в базу
-     * @param message
+     * @param message объект сообщения
      * @return 0 - если добавлено успешно, иначе 1
      */
     @Override

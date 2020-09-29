@@ -9,3 +9,9 @@ services:
       POSTGRES_USER: kirill
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: demo
+  demochat:
+    build: .
+    ports:
+      - 9090:9090
+    depends_on:
+      - db
